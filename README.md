@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 8:00 - RESEARCH
 
-8:00 - RESEARCH MORE
+9:00 - RESEARCH MORE
+
+10 - 11 - WORK ON MVP
 
 ## Available Scripts
 
