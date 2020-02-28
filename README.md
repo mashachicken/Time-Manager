@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1:30 - 2:00 - drawing a project layout
 
-
+2:00 - 3:00 - draw component tree diagram
 ## Project Description
 
 ### Layout
