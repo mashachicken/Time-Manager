@@ -6,9 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 9:00 - research more
 
-10 - 11 - work on MVP
+10:00 - 11:00 - work on MVP
 
-12 -  sent a project proposal, added a project description section
+12:00 -  sent a project proposal, added a project description section
 
 12:30 - 1:30 - breaking the UI into a Component Hierarchy
 
@@ -16,7 +16,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 2:00 - 3:30 - draw component tree diagram
 
-4:00 - Add components 
+4:00 - Add components and start building a basic version
+
+4:20 - 5:00 - Work on components 
 ## Project Description
 
 ### Layout
