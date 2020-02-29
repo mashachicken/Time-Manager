@@ -14,12 +14,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1:30 - 2:00 - drawing a project layout
 
-2:00 - 3:00 - draw component tree diagram
+2:00 - 3:30 - draw component tree diagram
+
+4:00 - Add components 
 ## Project Description
 
 ### Layout
 
 ![](public/time_manager.png)
+
+### Component Tree Diagram
+
+![](public/components.png)
 
 **Project Name:** Time Management App
 **Purpose:** This app will help users keep track of their time and help them be more productive and punctual
