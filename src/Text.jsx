@@ -6,7 +6,7 @@ function Text() {
   }
   return (
     <div style={font}>
-      <p> some text bla bla <p>
+      <p> some text bla bla </p>
     </div>
   )
 }

@@ -1,21 +1,30 @@
 import React from 'react';
 
-function TimeSet() {
-  const font = {
-    fontFamily: 'Monospace'
+class TimeSet extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this)
+    this.state = {
+      time: 0,
+      task: ''
+    }
   }
-  function myFunction() {
-    alert('Hello');
-  }
+    handleChange(e) {
+      this.setState({time: e.target.value});
+      console.log(this.state)
+    }
+  render() {
+    const time = this.state.time;
+    return (
+      <div>
+      <legend> Time i wish to spend on this task:</legend>
+      <input value={time} onChange={this.handleChange} />
 
-  return (
-    <div style={font}>
-    <form>
-    <input type="number">
-    <button onSubmission="setTimeout(myFunction, 3000)">Try it</button>
-    </form>
 
-    </div>
+
+      </div>
+
   )
+}
 }
 export default TimeSet

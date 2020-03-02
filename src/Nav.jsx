@@ -1,5 +1,7 @@
 import React from 'react';
-function Link1() {
+import Link1 from './Link1.jsx'
+import Link2 from './Link1.jsx'
+function Nav() {
   const font = {
     fontFamily: 'Monospace'
   }
@@ -8,8 +10,8 @@ function Link1() {
     <h1> Logo </h1>
     <Link1/>
     <Link2/>
-      <p> Your task: <p>
+      <p> Your task: </p>
     </div>
   )
 }
-export default Link1
+export default Nav

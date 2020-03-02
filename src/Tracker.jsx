@@ -4,24 +4,17 @@ import  Task from './Task';
 import  Body from './Body';
 import  TimeSet from './TimeSet';
 
-class Tracker extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      time: 0,
-      task: ''
-    }
-    render() {
-      return(
-        <div>
-        <Nav/>
-        <Task/>
-        <TimeSet/>
-        <Body/>
+function Tracker(){
 
-        </div>
-      );
-    }
-  }
+  return(
+    <div>
+    <Nav/>
+    <Task/>
+    <TimeSet/>
+    <Body/>
 
-  export default Tracker
+    </div>
+
+  )
+}
+export default Tracker

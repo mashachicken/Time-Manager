@@ -6,7 +6,7 @@ function Link2() {
   }
   return (
     <div style={font}>
-      <p> Your task: <p>
+      <p> Your task: </p>
     </div>
   )
 }
