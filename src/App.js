@@ -4,8 +4,11 @@ import Tracker from './Tracker.jsx';
 import './App.css';
 
 function App() {
+  const font = {
+    fontFamily: 'Monospace'
+  }
   return (
-    <div className="App">
+    <div style={font}>
       <header className="App-header">
         <Tracker/>
 

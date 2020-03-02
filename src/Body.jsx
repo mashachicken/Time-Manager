@@ -6,11 +6,8 @@ import Timer from './Timer.jsx'
 import CurrentTask from './CurrentTask.jsx'
 
 function Body() {
-  const font = {
-    fontFamily: 'Monospace'
-  }
   return (
-    <div style={font}>
+    <div>
     <Text/>
     <CurrentTask/>
     <Timer/>

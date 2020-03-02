@@ -6,7 +6,9 @@ function Task() {
   }
   return (
     <div style={font}>
-      <p> Enter a task: </p>
+      <legend> Enter a task </legend>
+      <input type="text" name="task" />
+
     </div>
   )
 }

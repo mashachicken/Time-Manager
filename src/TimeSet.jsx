@@ -71,6 +71,7 @@ class TimeSet extends React.Component {
     return (
       <div>
       <div className="Countdown-time">
+      <p> Set the time: </p>
       {hours} : {minutes} : {seconds}
       </div>
       <div className="Countdown-display">
