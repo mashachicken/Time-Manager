@@ -6,7 +6,7 @@ function Link1() {
   }
   return (
     <div style={font}>
-      <p> Your task: </p>
+      <p> Nav link </p>
     </div>
   )
 }

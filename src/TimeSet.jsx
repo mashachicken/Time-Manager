@@ -51,10 +51,13 @@ class TimeSet extends React.Component {
         this.setState({ timerTime: timerTime + 3600000 });
       } else if (input === "decHours" && timerTime - 3600000 >= 0) {
         this.setState({ timerTime: timerTime - 3600000 });
+        console.log(this.state)
       } else if (input === "incMinutes" && timerTime + 60000 < max) {
         this.setState({ timerTime: timerTime + 60000 });
+        console.log(this.state)
       } else if (input === "decMinutes" && timerTime - 60000 >= 0) {
         this.setState({ timerTime: timerTime - 60000 });
+        console.log(this.state)
       } else if (input === "incSeconds" && timerTime + 1000 < max) {
         this.setState({ timerTime: timerTime + 1000 });
       } else if (input === "decSeconds" && timerTime - 1000 >= 0) {
@@ -71,13 +74,16 @@ class TimeSet extends React.Component {
     return (
       <div>
       <div className="Countdown-time">
-      <p> Set the time: </p>
-      {hours} : {minutes} : {seconds}
+
       </div>
+    
       <div className="Countdown-display">
       <button onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
       <button onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
       <button onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>
+      <div className="Countdown-time">
+  {hours} : {minutes} : {seconds}
+</div>
       <button onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
       <button onClick={() => this.adjustTimer("decMinutes")}>&#8681;</button>
       <button onClick={() => this.adjustTimer("decSeconds")}>&#8681;</button>

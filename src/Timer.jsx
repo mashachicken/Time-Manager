@@ -6,7 +6,7 @@ function Timer() {
   }
   return (
     <div style={font}>
-    <p>  </p>
+    <p> </p>
 
     </div>
   )
