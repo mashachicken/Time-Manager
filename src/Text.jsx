@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Link1() {
+function Text() {
   const font = {
     fontFamily: 'Monospace'
   }
   return (
     <div style={font}>
-      <p> Your task: <p>
+      <p> some text bla bla <p>
     </div>
   )
 }
-export default Link1
+export default Text
