@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 4:00 - Add components and start building a basic version
 
-4:20 - 5:00 - Work on components 
+4:20 - 5:00 - work on components 
 ## Project Description
 
 ### Layout
@@ -29,7 +29,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![](public/components.png)
 
-**Project Name:** Time Management App
+**Project Name:** Time Manager
 **Purpose:** This app will help users keep track of their time and help them be more productive and punctual
 **Minimum Features:**
 User can enter a task and time limit they want to spend on it
@@ -38,11 +38,12 @@ Every 1 minute user will get a (voice) notification, reminding how much time the
 **Technologies and frameworks:**
 * JavaScript
 * React
+* Jest
 * Possibly an API
 **Stretch Goals:**
 * Customizable alarm ring tone (using your own recording) to increase motivation of a user even more
 * Saving user's history for personal statistics, and comparing productivity
-* Option to add multiple timers at selected time of the day so user can plan and manage their whole day
+* Option to add multiple timers at selected time of the day so user can plan and manage their entire day
 
 ## Available Scripts
 
