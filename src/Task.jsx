@@ -1,15 +1,25 @@
 import React from 'react';
 
-function Task() {
-  const font = {
-    fontFamily: 'Monospace'
-  }
-  return (
-    <div style={font}>
-      <legend> Enter a task </legend>
-      <input type="text" name="task" />
+class Task extends React.Component {
 
-    </div>
-  )
+  onFieldChange(event) {
+    const fieldName = event.target.name;
+    const fieldValue = event.target.value;
+    this.props.onChange(fieldName, fieldValue);
+  }
+  render(){
+    return (
+      <div>
+      <form>
+      <legend> Enter a tasfk </legend>
+      <input type="text" name="task" onChange={this.onFieldChange.bind(this)}/>
+      <button>
+      Push me
+      </button>
+      </form>
+      </div>
+    )
+  }
 }
+
 export default Task
