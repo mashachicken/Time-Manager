@@ -1,10 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: red;
+background: rgb(255,216,155); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(255,216,155,1) 0%, rgba(25,84,123,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,216,155,1) 0%,rgba(25,84,123,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,216,155,1) 0%,rgba(25,84,123,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd89b', endColorstr='#19547b',GradientType=1 ); /* IE6-9 */
+
 }
 
 code {

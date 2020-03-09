@@ -108,7 +108,7 @@ class Tracker extends React.Component {
             (timerStart !== timerTime && timerStart > 0) && (
               <button onClick={this.resetTimer}>Reset</button>
             )}
-            <Body/>
+            <Body myCurrentTask={this.state.task}  />
             </div>
           );
         }
