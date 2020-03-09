@@ -71,14 +71,19 @@ class Tracker extends React.Component {
     }
   };
   render() {
+    const trackerStyle = {
+
+    }
     const { timerTime, timerStart, timerOn } = this.state;
     let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
     let minutes = ("0" + Math.floor((timerTime / 60000) % 60)).slice(-2);
     let hours = ("0" + Math.floor((timerTime / 3600000) % 60)).slice(-2);
 
     return (
-      <div>
+      <div style={trackerStyle}>
+      <aside>
       <Nav/>
+      </aside>
       <Task onChange={this.onChange.bind(this)} />
       <h1>  </h1>
 

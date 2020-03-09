@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: red;
