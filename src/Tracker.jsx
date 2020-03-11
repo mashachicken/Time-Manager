@@ -12,9 +12,10 @@ class Tracker extends React.Component {
       timerTime: 0,
       task: ''
     };
+        this.handleNewTask = this.handleNewTask.bind(this);
   }
-  onChange(field, value) {
-        this.setState({[field]: value});
+  handleNewTask(task) {
+        this.setState(task);
         console.log(this.state.task)
     }
   startTimer = () => {
@@ -72,7 +73,13 @@ class Tracker extends React.Component {
   };
   render() {
     const trackerStyle = {
-
+      background: '#fff',
+      padding: '1em 1.4em',
+      color: 'black',
+      margin: '2em',
+      textAlign: 'center',
+      text: 'centered',
+      borderRadius: '25px'
     }
     const { timerTime, timerStart, timerOn } = this.state;
     let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
@@ -80,11 +87,12 @@ class Tracker extends React.Component {
     let hours = ("0" + Math.floor((timerTime / 3600000) % 60)).slice(-2);
 
     return (
-      <div style={trackerStyle}>
+      <div>
       <aside>
       <Nav/>
       </aside>
-      <Task onChange={this.onChange.bind(this)} />
+      <Task onNewTaskCreation={this.handleNewTask} />
+      <div style={trackerStyle}>
       <h1>  </h1>
 
       <div className="Countdown-display">
@@ -113,6 +121,7 @@ class Tracker extends React.Component {
             (timerStart !== timerTime && timerStart > 0) && (
               <button onClick={this.resetTimer}>Reset</button>
             )}
+            </div>
             <Body myCurrentTask={this.state.task}  />
             </div>
           );

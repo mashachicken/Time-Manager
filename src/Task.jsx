@@ -1,25 +1,32 @@
 import React from 'react';
-
-class Task extends React.Component {
-
-  onFieldChange(event) {
-    const fieldName = event.target.name;
-    const fieldValue = event.target.value;
-    this.props.onChange(fieldName, fieldValue);
-  }
-  render(){
+import Tracker from './Tracker'
+function Task(props) {
+  let _task = null
+  
+    function handleFieldSubmit(event) {
+      event.preventDefault()
+      console.log(_task.value)
+      props.onNewTaskCreation({task: _task.value})
+      _task.value = '';
+    }
+    const taskStyle = {
+      background: '#fff',
+      padding: '1em 1.4em',
+      color: 'black',
+      margin: '2em',
+      textAlign: 'center',
+      text: 'centered',
+      borderRadius: '25px'
+    }
     return (
-      <div>
-      <form>
-      <legend> Enter a tasfk </legend>
-      <input type="text" name="task" onChange={this.onFieldChange.bind(this)}/>
-      <button>
-      Push me
-      </button>
+      <div style={taskStyle}>
+      <form onSubmit={handleFieldSubmit}>
+      <legend> Enter a task </legend>
+      <input type="text" name="task" ref={(input) => {_task = input;}}/>
       </form>
       </div>
     )
   }
-}
+
 
 export default Task
