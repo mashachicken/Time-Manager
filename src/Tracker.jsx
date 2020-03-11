@@ -81,6 +81,13 @@ class Tracker extends React.Component {
       text: 'centered',
       borderRadius: '25px'
     }
+    const time = {
+      background: '#b06ab3',
+      borderRadius: '35px',
+      width: '4cm',
+        selfAlign: 'center'
+
+    }
     const { timerTime, timerStart, timerOn } = this.state;
     let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
     let minutes = ("0" + Math.floor((timerTime / 60000) % 60)).slice(-2);
@@ -95,11 +102,11 @@ class Tracker extends React.Component {
       <div style={trackerStyle}>
       <h1>  </h1>
 
-      <div className="Countdown-display">
+      <div className="Countdown-display" style={time}>
       <button onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
       <button onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
       <button onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>
-      <div className="Countdown-time">
+      <div className="Countdown-time" style={time}>
   {hours} : {minutes} : {seconds}
 </div>
       <button onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
