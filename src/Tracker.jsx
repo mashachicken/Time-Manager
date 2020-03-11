@@ -85,7 +85,8 @@ class Tracker extends React.Component {
       background: '#b06ab3',
       borderRadius: '35px',
       width: '4cm',
-        selfAlign: 'center'
+        selfAlign: 'center',
+         display: 'inline-block'
 
     }
     const { timerTime, timerStart, timerOn } = this.state;
@@ -112,7 +113,7 @@ class Tracker extends React.Component {
       <button onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
       <button onClick={() => this.adjustTimer("decMinutes")}>&#8681;</button>
       <button onClick={() => this.adjustTimer("decSeconds")}>&#8681;</button>
-      </div>
+      </div><br/>
       {timerOn === false &&
         (timerStart === 0 || timerTime === timerStart) && (
           <button onClick={this.startTimer}>Start</button>
