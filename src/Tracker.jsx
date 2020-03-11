@@ -2,6 +2,7 @@ import React from 'react';
 import Task from './Task'
 import Body from './Body'
 import Nav from './Nav'
+const Sound = require('react-native-sound')
 class Tracker extends React.Component {
   constructor() {
     super();
@@ -14,6 +15,8 @@ class Tracker extends React.Component {
     };
         this.handleNewTask = this.handleNewTask.bind(this);
   }
+  let alarmSound = new Sound('alarm.mp3', Sound.MAIN_BUNDLE,if (error){
+    console.log(error)
   handleNewTask(task) {
         this.setState(task);
         console.log(this.state.task)
@@ -33,8 +36,9 @@ class Tracker extends React.Component {
       } else {
         clearInterval(this.timer);
         this.setState({ timerOn: false });
-        alert("Countdown ended");
-      }
+        }
+      })
+    }
     }, 10);
   };
 
@@ -72,6 +76,7 @@ class Tracker extends React.Component {
     }
   };
   render() {
+
     const trackerStyle = {
       background: '#fff',
       padding: '1em 1.4em',

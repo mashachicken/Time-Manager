@@ -6,7 +6,7 @@ function Link1() {
   }
   return (
     <div style={font}>
-      <p> ddNav link </p>
+      <p> Nav link </p>
     </div>
   )
 }
