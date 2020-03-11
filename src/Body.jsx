@@ -9,7 +9,7 @@ import CurrentTask from './CurrentTask.jsx'
 
 function Body(props) {
   const main = {
-
+      textAlign: 'center'
   }
   const taskTime ={
   display: 'inline'

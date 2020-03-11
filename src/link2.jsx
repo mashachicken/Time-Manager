@@ -2,7 +2,8 @@ import React from 'react';
 
 function Link2() {
   const font = {
-    fontFamily: 'Monospace'
+    fontFamily: 'Monospace',
+    
   }
   return (
     <div style={font}>
