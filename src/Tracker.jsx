@@ -2,7 +2,6 @@ import React from 'react';
 import Task from './Task'
 import Body from './Body'
 import Nav from './Nav'
-const Sound = require('react-native-sound')
 class Tracker extends React.Component {
   constructor() {
     super();
@@ -15,8 +14,6 @@ class Tracker extends React.Component {
     };
         this.handleNewTask = this.handleNewTask.bind(this);
   }
-  let alarmSound = new Sound('alarm.mp3', Sound.MAIN_BUNDLE,if (error){
-    console.log(error)
   handleNewTask(task) {
         this.setState(task);
         console.log(this.state.task)
@@ -34,11 +31,12 @@ class Tracker extends React.Component {
           timerTime: newTime
         });
       } else {
+        const audioEl = document.getElementsByClassName("audio-element")[0]
         clearInterval(this.timer);
         this.setState({ timerOn: false });
-        }
-      })
-    }
+
+        audioEl.play()
+      }
     }, 10);
   };
 
@@ -76,7 +74,6 @@ class Tracker extends React.Component {
     }
   };
   render() {
-
     const trackerStyle = {
       background: '#fff',
       padding: '1em 1.4em',
@@ -135,6 +132,9 @@ class Tracker extends React.Component {
               <button onClick={this.resetTimer}>Reset</button>
             )}
             </div>
+            <audio className="audio-element" id="xyz" src="alarm.mp3">
+
+                  </audio>
             <Body myCurrentTask={this.state.task}  />
             </div>
           );
