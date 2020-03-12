@@ -3,13 +3,22 @@ body {
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: red;
   background: rgb(176,106,179); /* Old browsers */
   background: -moz-linear-gradient(left, rgba(176,106,179,1) 0%, rgba(69,104,220,1) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, rgba(176,106,179,1) 0%,rgba(69,104,220,1) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, rgba(176,106,179,1) 0%,rgba(69,104,220,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b06ab3', endColorstr='#4568dc',GradientType=1 ); /* IE6-9 */
 
+}
+
+@media only screen and (min-width: 715px) {
+  body: {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 2em;
+  color: red;
+  background: red;
+}
 }
 
 code {
