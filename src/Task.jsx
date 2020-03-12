@@ -2,7 +2,7 @@ import React from 'react';
 import Tracker from './Tracker'
 function Task(props) {
   let _task = null
-  
+
     function handleFieldSubmit(event) {
       event.preventDefault()
       console.log(_task.value)
@@ -15,7 +15,6 @@ function Task(props) {
       color: 'black',
       margin: '2em',
       textAlign: 'center',
-      text: 'centered',
       borderRadius: '25px'
     }
     return (
