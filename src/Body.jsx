@@ -9,19 +9,23 @@ import CurrentTask from './CurrentTask.jsx'
 
 function Body(props) {
   const main = {
+
       textAlign: 'center'
   }
   const taskTime ={
-  display: 'inline'
+  margin: '0',
+  paddingTop: '25%'
+
+
   }
 console.log("task state props inside the body:" + props.myCurrentTask)
   return (
     <div style={main}>
-    <div style={taskTime}>
+    <div style={taskTime} id="taskTime">
     <CurrentTask currentTask={props.myCurrentTask}/>
-    <Timer/>
+    <Timer setTime={props.myTime}/>
     </div>
-    <Text/>
+
 
     </div>
   )

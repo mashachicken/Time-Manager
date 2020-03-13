@@ -2,6 +2,7 @@ import React from 'react';
 import Task from './Task'
 import Body from './Body'
 import Nav from './Nav'
+import Text from './Text.jsx'
 class Tracker extends React.Component {
   constructor() {
     super();
@@ -75,7 +76,7 @@ class Tracker extends React.Component {
   };
   render() {
     const trackerStyle = {
-      background: '#fff',
+      background: '#ffff',
       padding: '1em 1.4em',
       color: 'black',
       margin: '2em',
@@ -87,6 +88,7 @@ class Tracker extends React.Component {
       background: '#b06ab3',
       borderRadius: '35px',
       width: '4cm',
+
         selfAlign: 'center',
          display: 'inline-block'
 
@@ -101,7 +103,8 @@ class Tracker extends React.Component {
       <aside>
       <Nav/>
       </aside>
-      <Task onNewTaskCreation={this.handleNewTask} />
+      <Body myCurrentTask={this.state.task} myTime = {this.state.timerTime}  />
+      <Task onNewTaskCreation={this.handleNewTask}/>
       <div style={trackerStyle}>
       <h1>  </h1>
 
@@ -135,7 +138,7 @@ class Tracker extends React.Component {
             <audio className="audio-element" id="xyz" src="alarm.mp3">
 
                   </audio>
-            <Body myCurrentTask={this.state.task}  />
+                    <Text/>
             </div>
           );
         }

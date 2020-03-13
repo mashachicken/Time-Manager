@@ -14,16 +14,14 @@ body {
 @media only screen and (min-width: 400px) {
     body {
 
-
+      font-size: 15px;
       margin:0;
+       padding: 2em;
 
-       padding:0;
-        overflow:hidden
 
     }
     #curved {
 
-       position:fixed;
         top: 55px;
          bottom:0;
           left:0;
@@ -41,6 +39,17 @@ body {
        margin: 0 auto;
        position: fixed;
     z-index: 2;
+    color: red;
+      }
+      #taskStyle {
+        margin: 0;
+      padding:0;
+      }
+      #taskTime {
+
+      display: flex;
+      flex-direction: row;
+        padding-top: 25%;
       }
 }
 

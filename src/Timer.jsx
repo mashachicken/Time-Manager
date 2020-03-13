@@ -1,18 +1,18 @@
 import React from 'react';
 
-function Timer() {
+function Timer(props) {
   const font = {
-    background: '#fff',
-    padding: '1em 1.4em',
-    color: 'black',
+    fontFamily: 'Monospace',
     margin: '2em',
-    textAlign: 'center',
-    text: 'centered',
-    borderRadius: '25px'
+    padding: '2em',
+    borderRadius: '25px',
+    color: 'black',
+      background: '#fff',
   }
+
   return (
     <div style={font}>
-    <p> Time: </p>
+    <p> Time: {props.myTime} </p>
 
     </div>
   )

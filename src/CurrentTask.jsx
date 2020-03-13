@@ -2,19 +2,18 @@ import React from 'react';
 
 function CurrentTask(props) {
   const task = {
-    background: '#fff',
-    padding: '1em 1.4em',
-    color: 'black',
+    fontFamily: 'Monospace',
     margin: '2em',
-    textAlign: 'center',
-    text: 'centered',
-    borderRadius: '25px'
+    padding: '1em',
+    borderRadius: '25px',
+    color: 'black',
+      background: '#fff',
   }
 
   console.log(props.currentTask)
   return (
     <div style={task}>
-      <p> Your task: {props.currentTask}</p>
+      <p> Your task: <br/> {props.currentTask}</p>
     </div>
   )
 }
