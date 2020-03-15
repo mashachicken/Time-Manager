@@ -20,7 +20,7 @@ const navStyle = {
   return (
     <div>
     <div style={navStyle} id="navStyle">
-    <h1> Logo </h1>
+    <h3> Time's App! </h3>
     <Link1/>
     <Link2/>
 

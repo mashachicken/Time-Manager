@@ -9,10 +9,16 @@ function Timer(props) {
     color: 'black',
       background: '#fff',
   }
-
+  let status = ''
+if (props.setTime == true) {
+  status = "on"
+} else {
+  status = 'off'
+}
+console.log(status)
   return (
     <div style={font}>
-    <p> Time: {props.myTime} </p>
+    <p> Timer: {status} </p>
 
     </div>
   )

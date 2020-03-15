@@ -76,7 +76,7 @@ class Tracker extends React.Component {
   };
   render() {
     const trackerStyle = {
-      background: '#ffff',
+      background: 'rgba(255, 255, 255, 0.8)',
       padding: '1em 1.4em',
       color: 'black',
       margin: '2em',
@@ -87,11 +87,17 @@ class Tracker extends React.Component {
     const time = {
       background: '#b06ab3',
       borderRadius: '35px',
-      width: '4cm',
+      borderStyle: 'solid',
+      borderColor: '#4568dc',
+      width: '6cm',
 
         selfAlign: 'center',
          display: 'inline-block'
 
+    }
+    const button = {
+      background: '#4568dc',
+        borderRadius: '30px'
     }
     const { timerTime, timerStart, timerOn } = this.state;
     let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
@@ -103,21 +109,21 @@ class Tracker extends React.Component {
       <aside>
       <Nav/>
       </aside>
-      <Body myCurrentTask={this.state.task} myTime = {this.state.timerTime}  />
+      <Body myCurrentTask={this.state.task} myTimer={this.state.timerOn}  />
       <Task onNewTaskCreation={this.handleNewTask}/>
       <div style={trackerStyle}>
       <h1>  </h1>
 
-      <div className="Countdown-display" style={time}>
-      <button onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
-      <button onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
-      <button onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>
-      <div className="Countdown-time" style={time}>
+      <div className="Countdown-display" style={time} id="time">
+      <button style={button} onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
+      <button style={button} onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
+      <button style={button} onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>
+      <div className="Countdown-time" style={time} id="time">
   {hours} : {minutes} : {seconds}
 </div>
-      <button onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
-      <button onClick={() => this.adjustTimer("decMinutes")}>&#8681;</button>
-      <button onClick={() => this.adjustTimer("decSeconds")}>&#8681;</button>
+      <button style={button} onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
+      <button style={button} onClick={() => this.adjustTimer("decMinutes")}>&#8681;</button>
+      <button style={button} onClick={() => this.adjustTimer("decSeconds")}>&#8681;</button>
       </div><br/>
       {timerOn === false &&
         (timerStart === 0 || timerTime === timerStart) && (

@@ -19,11 +19,12 @@ function Body(props) {
 
   }
 console.log("task state props inside the body:" + props.myCurrentTask)
+console.log(props.myTimer)
   return (
     <div style={main}>
     <div style={taskTime} id="taskTime">
     <CurrentTask currentTask={props.myCurrentTask}/>
-    <Timer setTime={props.myTime}/>
+    <Timer setTime={props.myTimer}/>
     </div>
 
 
