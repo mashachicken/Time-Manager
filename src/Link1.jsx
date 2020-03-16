@@ -2,11 +2,11 @@ import React from 'react';
 
 function Link1() {
   const font = {
-    fontFamily: 'Monospace'
+  fontFamily: 'Monospace'
   }
   return (
     <div style={font}>
-      <p> Nav link </p>
+    <p> Nav link </p>
     </div>
   )
 }

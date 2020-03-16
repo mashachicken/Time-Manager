@@ -8,7 +8,7 @@ function CurrentTask(props) {
     paddingTop: '2em',
     borderRadius: '25px',
     color: 'black',
-      background: '#fff',
+    background: '#fff',
   }
   const taskStyle = {
     color: '#4568dc'

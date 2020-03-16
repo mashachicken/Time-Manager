@@ -13,18 +13,18 @@ class Tracker extends React.Component {
       timerTime: 0,
       task: ''
     };
-        this.handleNewTask = this.handleNewTask.bind(this);
+    this.handleNewTask = this.handleNewTask.bind(this);
   }
   handleNewTask(task) {
-        this.setState(task);
-        console.log(this.state.task)
-    }
+    this.setState(task);
+  }
   startTimer = () => {
     this.setState({
       timerOn: true,
       timerTime: this.state.timerTime,
       timerStart: this.state.timerTime
     });
+
     this.timer = setInterval(() => {
       const newTime = this.state.timerTime - 10;
       if (newTime >= 0) {
@@ -45,6 +45,7 @@ class Tracker extends React.Component {
     clearInterval(this.timer);
     this.setState({ timerOn: false });
   };
+
   resetTimer = () => {
     if (this.state.timerOn === false) {
       this.setState({
@@ -52,6 +53,7 @@ class Tracker extends React.Component {
       });
     }
   };
+
   adjustTimer = input => {
     const { timerTime, timerOn } = this.state;
     const max = 216000000;
@@ -97,14 +99,12 @@ class Tracker extends React.Component {
          display: 'inline-block'
 
     }
-    const time = {
-
-    }
     const button = {
       background: 'white',
-        borderRadius: '30px',
-        borderColor: 'black'
+      borderRadius: '30px',
+      borderColor: 'black'
     }
+
     const { timerTime, timerStart, timerOn } = this.state;
     let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
     let minutes = ("0" + Math.floor((timerTime / 60000) % 60)).slice(-2);
@@ -112,46 +112,44 @@ class Tracker extends React.Component {
 
     return (
       <div>
-      <aside>
-      <Nav/>
-      </aside>
-      <Body myCurrentTask={this.state.task} myTimer={this.state.timerOn}  />
-      <Task onNewTaskCreation={this.handleNewTask}/>
-      <div style={trackerStyle}>
-      <h1>  </h1>
+        <aside>
+          <Nav/>
+        </aside>
+        <Body myCurrentTask={this.state.task} myTimer={this.state.timerOn}  />
+        <Task onNewTaskCreation={this.handleNewTask}/>
+        <div style={trackerStyle}>
+          <h1>  </h1>
 
-      <div className="Countdown-display" style={timeSet} id="time">
-      <button style={button} onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
-      <button style={button} onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
-      <button style={button} onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>
-      <div className="Countdown-time" style={time} id="time">
-  {hours} : {minutes} : {seconds}
-</div>
-      <button style={button} onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
-      <button style={button} onClick={() => this.adjustTimer("decMinutes")}>&#8681;</button>
-      <button style={button} onClick={() => this.adjustTimer("decSeconds")}>&#8681;</button>
-      </div><br/>
-      {timerOn === false &&
-        (timerStart === 0 || timerTime === timerStart) && (
-          <button onClick={this.startTimer}>Start</button>
-        )}
+          <div className="Countdown-display" style={timeSet} id="time">
+            <button style={button} onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
+            <button style={button} onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
+            <button style={button} onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>
+            <div className="Countdown-time" id="time">
+              {hours} : {minutes} : {seconds}
+            </div>
+            <button style={button} onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
+            <button style={button} onClick={() => this.adjustTimer("decMinutes")}>&#8681;</button>
+            <button style={button} onClick={() => this.adjustTimer("decSeconds")}>&#8681;</button>
+        </div><br/>
+        {timerOn === false &&
+          (timerStart === 0 || timerTime === timerStart) && (
+            <button onClick={this.startTimer}>Start</button>
+          )}
         {timerOn === true && timerTime >= 1000 && (
           <button onClick={this.stopTimer}>Stop</button>
         )}
         {timerOn === false &&
-          (timerStart !== 0 && timerStart !== timerTime && timerTime !== 0) && (
-            <button onClick={this.startTimer}>Resume</button>
+        (timerStart !== 0 && timerStart !== timerTime && timerTime !== 0) && (
+          <button onClick={this.startTimer}>Resume</button>
           )}
-          {(timerOn === false || timerTime < 1000) &&
-            (timerStart !== timerTime && timerStart > 0) && (
-              <button onClick={this.resetTimer}>Reset</button>
-            )}
-            </div>
-            <audio className="audio-element" id="xyz" src="alarm.mp3">
-
-                  </audio>
-                    <Text/>
-            </div>
+        {(timerOn === false || timerTime < 1000) &&
+        (timerStart !== timerTime && timerStart > 0) && (
+          <button onClick={this.resetTimer}>Reset</button>
+          )}
+        </div>
+        <audio className="audio-element" id="xyz" src="alarm.mp3"> </audio>
+        <Text/>
+     </div>
           );
         }
       }

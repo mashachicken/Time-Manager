@@ -1,25 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Timestamps
-
-8:00 - research
-
-9:00 - research more
-
-10:00 - 11:00 - work on MVP
-
-12:00 -  sent a project proposal, added a project description section
-
-12:30 - 1:30 - breaking the UI into a Component Hierarchy
-
-1:30 - 2:00 - drawing a project layout
-
-2:00 - 3:30 - draw component tree diagram
-
-4:00 - Add components and start building a basic version
-
-4:20 - 5:00 - work on components 
-## Project Description
 
 ### Layout
 
@@ -33,8 +13,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 **Purpose:** This app will help users keep track of their time and help them be more productive and punctual
 **Minimum Features:**
 User can enter a task and time limit they want to spend on it
-The input will be taken from a user and used to set a timer. When timer end, an alarm will go off.
-Every 1 minute user will get a (voice) notification, reminding how much time they have left
+The input will be taken from a user and used to set a timer. When timer ends, an alarm will go off.
+Every 1 minute user will get a (voice) notification, reminding how much time they have left (Still working on this feature)
 **Technologies and frameworks:**
 * JavaScript
 * React

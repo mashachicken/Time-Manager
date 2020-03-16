@@ -7,12 +7,11 @@ function App() {
   const text = {
     fontFamily: 'Monospace'
   }
+  
   return (
     <div style={text}>
       <header className="App-header">
         <Tracker/>
-
-
       </header>
     </div>
   );
