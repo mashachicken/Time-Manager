@@ -76,7 +76,7 @@ class Tracker extends React.Component {
   };
   render() {
     const trackerStyle = {
-      background: 'rgba(255, 255, 255, 0.8)',
+      background: '#fff',
       padding: '1em 1.4em',
       color: 'black',
       margin: '2em',
@@ -84,8 +84,10 @@ class Tracker extends React.Component {
       text: 'centered',
       borderRadius: '25px'
     }
-    const time = {
-      background: '#b06ab3',
+    const timeSet = {
+
+      background: '#dcb4de',
+
       borderRadius: '35px',
       borderStyle: 'solid',
       borderColor: '#4568dc',
@@ -95,9 +97,13 @@ class Tracker extends React.Component {
          display: 'inline-block'
 
     }
+    const time = {
+
+    }
     const button = {
-      background: '#4568dc',
-        borderRadius: '30px'
+      background: 'white',
+        borderRadius: '30px',
+        borderColor: 'black'
     }
     const { timerTime, timerStart, timerOn } = this.state;
     let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
@@ -114,7 +120,7 @@ class Tracker extends React.Component {
       <div style={trackerStyle}>
       <h1>  </h1>
 
-      <div className="Countdown-display" style={time} id="time">
+      <div className="Countdown-display" style={timeSet} id="time">
       <button style={button} onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
       <button style={button} onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
       <button style={button} onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>

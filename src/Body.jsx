@@ -12,12 +12,12 @@ function Body(props) {
 
       textAlign: 'center'
   }
+  
   const taskTime ={
   margin: '0',
   paddingTop: '25%'
-
-
   }
+
 console.log("task state props inside the body:" + props.myCurrentTask)
 console.log(props.myTimer)
   return (

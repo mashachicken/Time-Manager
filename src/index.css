@@ -53,10 +53,17 @@ body {
       }
       #time  {
       width: 6cm;
+    }
 
-
-
+      #curved2 {
+        top: 20px;
+         bottom:0;
+          left:0;
+          right:0;
+          position: fixed;
       }
+
+
 }
 
 

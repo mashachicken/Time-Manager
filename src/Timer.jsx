@@ -9,6 +9,9 @@ function Timer(props) {
     color: 'black',
       background: '#fff',
   }
+  const statusStyle = {
+    color: '#4568dc'
+  }
   let status = ''
 if (props.setTime == true) {
   status = "on"
@@ -18,7 +21,7 @@ if (props.setTime == true) {
 console.log(status)
   return (
     <div style={font}>
-    <p> Timer: {status} </p>
+    <p> Timer: <br/> <span style={statusStyle}> {status}</span> </p>
 
     </div>
   )
