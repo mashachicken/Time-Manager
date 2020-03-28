@@ -2,7 +2,7 @@ import React from 'react';
 import Tracker from './Tracker'
 function Task(props) {
   let _task = null
-
+  const history = []
     function handleFieldSubmit(event) {
       event.preventDefault()
       console.log(_task.value)

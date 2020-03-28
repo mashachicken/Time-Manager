@@ -1,5 +1,4 @@
 import React from 'react';
-import  Nav from './Nav';
 import  Task from './Task';
 import Text from './Text.jsx'
 import Tracker from './Tracker.jsx'

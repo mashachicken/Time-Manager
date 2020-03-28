@@ -10,12 +10,16 @@ class Tracker extends React.Component {
       timerOn: false,
       timerStart: 0,
       timerTime: 0,
-      task: ''
+      task: '',
+      history: []
     };
     this.handleNewTask = this.handleNewTask.bind(this);
   }
   handleNewTask(task) {
     this.setState(task);
+    let joined = this.state.history.concat(task)
+    this.setState({history: joined})
+    console.log(this.state.history)
   }
   startTimer = () => {
     this.setState({
