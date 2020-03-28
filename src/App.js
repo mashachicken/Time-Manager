@@ -2,15 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import Tracker from './Tracker.jsx';
 import './App.css';
-
+import Nav from './Nav.jsx'
 function App() {
   const text = {
     fontFamily: 'Monospace'
   }
-  
   return (
     <div style={text}>
       <header className="App-header">
+      <Nav/>
         <Tracker/>
       </header>
     </div>

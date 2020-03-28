@@ -17,8 +17,6 @@ function Body(props) {
     paddingTop: '25%'
   }
 
-console.log("task state props inside the body:" + props.myCurrentTask)
-console.log(props.myTimer)
   return (
     <div style={main}>
       <div style={taskTime} id="taskTime">

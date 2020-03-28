@@ -1,7 +1,6 @@
 import React from 'react';
 import Task from './Task'
 import Body from './Body'
-import Nav from './Nav'
 import Text from './Text.jsx'
 class Tracker extends React.Component {
   constructor() {
@@ -113,7 +112,7 @@ class Tracker extends React.Component {
     return (
       <div>
         <aside>
-          <Nav/>
+
         </aside>
         <Body myCurrentTask={this.state.task} myTimer={this.state.timerOn}  />
         <Task onNewTaskCreation={this.handleNewTask}/>

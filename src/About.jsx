@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Link1() {
+function About() {
   const font = {
   fontFamily: 'Monospace'
   }
   return (
     <div style={font}>
-    <p> Nav link </p>
+    <p> Hey</p>
     </div>
   )
 }
-export default Link1
+export default About
