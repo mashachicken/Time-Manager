@@ -6,7 +6,11 @@ function History(props) {
   const font = {
   fontFamily: 'Monospace',
   padding: '0px',
-  margin: '0px'
+  margin: '0px',
+  fontSize: '20px'
+  }
+  const taskStyle = {
+  
   }
   console.log(props.history)
 
@@ -15,7 +19,7 @@ function History(props) {
     <div style={font}>
     <h5>History </h5>
     {props.history.map((item, i) => (<li key={i}>
-      last task: {item[i].task}</li>
+    <span style={taskStyle}> {item.task} </span> </li>
     ))}
 
 
