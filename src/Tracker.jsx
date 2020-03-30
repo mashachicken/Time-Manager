@@ -2,6 +2,7 @@ import React from 'react';
 import Task from './Task'
 import Body from './Body'
 import Text from './Text.jsx'
+import History from './History.jsx'
 class Tracker extends React.Component {
   constructor() {
     super();
@@ -90,22 +91,29 @@ class Tracker extends React.Component {
       borderRadius: '25px'
     }
     const timeSet = {
-
       background: '#dcb4de',
-
       borderRadius: '35px',
       borderStyle: 'solid',
       borderColor: '#4568dc',
       width: '6cm',
-
-        selfAlign: 'center',
-         display: 'inline-block'
-
+      selfAlign: 'center',
+      display: 'inline-block'
     }
     const button = {
       background: 'white',
       borderRadius: '30px',
       borderColor: 'black'
+    }
+    const float = {
+      float: 'left',
+      padding: '1.5em',
+      background: 'white',
+      color: 'black',
+      marginTop: '10em',
+      marginLeft: '-42%',
+      backgroundColor: 'RGBA(17,17,17,0.28)',
+      width: '20%',
+      height: '15cm'
     }
 
     const { timerTime, timerStart, timerOn } = this.state;
@@ -116,6 +124,9 @@ class Tracker extends React.Component {
     return (
       <div>
         <aside>
+        <div id="historyDiv" style={float}>
+        <History/>
+        </div>
 
         </aside>
         <Body myCurrentTask={this.state.task} myTimer={this.state.timerOn}  />
