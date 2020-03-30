@@ -5,7 +5,6 @@ function Task(props) {
   const history = []
     function handleFieldSubmit(event) {
       event.preventDefault()
-      console.log(_task.value)
       props.onNewTaskCreation({task: _task.value})
       _task.value = '';
     }

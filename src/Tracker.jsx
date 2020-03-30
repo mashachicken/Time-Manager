@@ -20,7 +20,6 @@ class Tracker extends React.Component {
     this.setState(task);
     let joined = this.state.history.concat(task)
     this.setState({history: joined})
-    console.log(this.state.history)
   }
   startTimer = () => {
     this.setState({
@@ -125,7 +124,7 @@ class Tracker extends React.Component {
       <div>
         <aside>
         <div id="historyDiv" style={float}>
-        <History/>
+        <History history={this.state.history}/>
         </div>
 
         </aside>

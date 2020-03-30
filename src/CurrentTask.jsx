@@ -14,7 +14,6 @@ function CurrentTask(props) {
     color: '#4568dc'
   }
 
-  console.log(props.currentTask)
   return (
     <div style={task}>
       <p> Your task: <br/> <span style={taskStyle}> {props.currentTask}</span></p>
