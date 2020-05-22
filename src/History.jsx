@@ -7,10 +7,11 @@ function History(props) {
   fontFamily: 'Monospace',
   padding: '0px',
   margin: '0px',
-  fontSize: '20px'
+  fontSize: '20px',
+  poaition: 'fixed'
   }
   const taskStyle = {
-  
+
   }
   console.log(props.history)
 

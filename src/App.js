@@ -11,7 +11,8 @@ function App() {
     background: 'white',
     color: 'black',
     padding: '1.5em',
-    margin: '0'
+    margin: '0',
+    fontFamily: 'Beauty Mountains Personal Use'
   }
   const curved = {
     color: 'black',
@@ -39,15 +40,17 @@ function App() {
       width: '15%'
     }
     const button = {
+      backgroundColor: 'Transparent',
       outline: 'none',
-      background: 'white',
       border: 'none',
       boxSizing: 'none',
       display: 'inline-block',
       cursor: 'pointer',
       fontSize: '20px',
       padding: '0em',
-      fontFamily: 'Monospace'
+      fontFamily: 'Monospace',
+      overflow: 'hidden',
+      outline: 'none'
 
     }
   const text = {
@@ -64,7 +67,7 @@ function App() {
       </div>
       <div style={curved}  id="curved">
         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320"><path fill="#fff" fillOpacity="1" d="M0,256L60,245.3C120,235,240,213,360,181.3C480,149,600,107,720,117.3C840,128,960,192,1080,197.3C1200,203,1320,149,1380,122.7L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-      
+
       </div>
         <Tracker/>
       </header>
